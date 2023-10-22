@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CreateHotelFormView } from "../../components"
+import { CreateHotelFormView, HotelCard } from "../../components"
 import { Hotel } from "../../interfaces";
 
 const HomeView = () => {
@@ -17,11 +17,11 @@ const HomeView = () => {
         <h2>Hotels</h2>
         <ul>
           {hotels.map((hotel) => (
-            <li key={hotel.name}>{hotel.name}</li>
+            <HotelCard key={hotel.name} hotel={hotel} />
           ))}
         </ul>
       </div>
-    </div>  
+    </div>
   )
 }
 
